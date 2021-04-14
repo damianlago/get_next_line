@@ -19,7 +19,7 @@ int	ft_return(int fd, char **line, int b_read, char **str)
 		*line = ft_strdup("");
 		return (0);
 	}
-	while (str[fd][len] != '\0' || str[fd][len] != '\n')
+	while (str[fd][len] != '\0' && str[fd][len] != '\n')
 		len++;
 	if (str[fd][len] == '\n')
 	{
@@ -40,11 +40,12 @@ int	ft_return(int fd, char **line, int b_read, char **str)
 int	get_next_line(int fd, char **line)
 {
 	static char	*str[4096];
-	char		buff[BUFFER_SIZE + 1];
+	char		*buff;
 	char		*temp;
-	int		b_read;
-
-	if (fd < 0 || line == NULL || BUFFER_SIZE < 1)
+	int			b_read;
+	
+	buff = malloc((sizeof(char) * (BUFFER_SIZE)) + 1);
+	if (fd < 0 || !line || BUFFER_SIZE < 1 || !buff)
 		return (-1);
 	while ((b_read = read(fd, buff, BUFFER_SIZE)) > 0)
 	{
@@ -57,6 +58,7 @@ int	get_next_line(int fd, char **line)
 		if (ft_strchr(buff, '\n'))
 			break;
 	}
+	free(buff);
 	if (b_read < 0)
 		return (-1);
 	else

@@ -11,7 +11,7 @@ int main(void)
 	fd = open("test.txt", O_RDONLY);
 	while (get_next_line(fd, &line))
 	{
-		printf("%s", line);
+		printf("%s\n", line);
 		free(line);
 		line = NULL;
 	}
