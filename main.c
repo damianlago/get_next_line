@@ -11,10 +11,10 @@ int main(void)
 	fd = open("test.txt", O_RDONLY);
 	while (get_next_line(fd, &line))
 	{
-		printf("%s\n", line);
+		printf("%s", line);
 		free(line);
 		line = NULL;
 	}
-	//system("leaks a.out");
+	system("leaks a.out");
 	return (0);
 }

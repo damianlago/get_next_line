@@ -2,19 +2,19 @@
 
 size_t	ft_strlen(const char *str)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	while(*str++)
+	while (*str++)
 		i++;
 	return (i);
 }
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char *str;
-	size_t i;
-	size_t len;
+	char	*str;
+	size_t	i;
+	size_t	len;
 
 	i = 0;
 	len = ft_strlen(s1) + ft_strlen(s2);
@@ -29,10 +29,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
 		if (s[i] == (unsigned char)c)
 			return (&((char *)s)[i]);
@@ -44,8 +44,8 @@ char	*ft_strchr(const char *s, int c)
 char	*ft_strdup(const char *s1)
 {
 	char	*s2;
-	int	len;
-	int	i;
+	int		len;
+	int		i;
 
 	len = ft_strlen(s1);
 	if (s1 == NULL)
@@ -65,8 +65,8 @@ char	*ft_strdup(const char *s1)
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *s2;
-	unsigned int i;
+	char			*s2;
+	unsigned int	i;
 
 	i = 0;
 	if (!s)
