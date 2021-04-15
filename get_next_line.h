@@ -13,6 +13,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *str, unsigned int start, size_t len);
 void	ft_freestr(char **str);
-int		ft_return(char **line, int b_read, char **str, int len, char *temp);
+int		ft_return(char **line, char **str, int bytes_r);
+int		ft_get_line(char **line, char **str);
 
 #endif
