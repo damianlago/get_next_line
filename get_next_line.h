@@ -6,14 +6,11 @@
 # include <stdlib.h>
 # include <fcntl.h>
 
-int		get_next_line(int fd, char **line);
-size_t	ft_strlen(const char *str);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strdup(const char *s1);
-char	*ft_substr(char const *str, unsigned int start, size_t len);
-void	ft_freestr(char **str);
-int		ft_return(char **line, char **str, int bytes_r);
-int		ft_get_line(char **line, char **str);
+int			get_next_line(int fd, char **line);
+size_t		ft_strlen(char *str);
+char		*ft_strjoin(char *s1, char *s2);
+char		*ft_strchr(char *s, int c);
+char		*ft_strdup(char *s1);
+char		*ft_substr(char *str, unsigned int start, size_t len);
 
 #endif
