@@ -14,6 +14,7 @@ int main(void)
 		free(line);
 		line = NULL;
 	}
+	
 	system("leaks a.out");
 	return (0);
 }
