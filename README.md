@@ -1,8 +1,6 @@
 # **get_next_line**
 This function will read content line by line from a file descriptor and return it without the newline. May it be a file, stdin or even a network connection. 
 
----
-
 * This function is made using a static variable only, and is able to manage multiple fd.
 * If you call get_next_line inside a while in your main, it will return all content from fd line by line.
 * Function Read use the BUFFER_SIZE defined during compilation.
@@ -20,3 +18,5 @@ $ gcc get_next_line.c get_next_line_utils.c get_next_line.h
 
 ```
 ---
+
+If you are looking for and explanation of the code it´s avaiable in *get_next_line.c* file. Also *main* directory contains a main.c file that you can use to execute the programn and a text file that will be read.
