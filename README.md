@@ -3,9 +3,9 @@ This function will read content line by line from a file descriptor and return i
 
 ---
 
-*This function is made using a static variable only, and is able to manage multiple fd.
-*If you call get_next_line inside a while in your main, it will return all content from fd line by line.
-*Function Read use the BUFFER_SIZE defined during compilation.
+* This function is made using a static variable only, and is able to manage multiple fd.
+* If you call get_next_line inside a while in your main, it will return all content from fd line by line.
+* Function Read use the BUFFER_SIZE defined during compilation.
 
 ---
 
