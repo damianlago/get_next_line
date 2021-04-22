@@ -19,7 +19,7 @@ $ gcc get_next_line.c get_next_line_utils.c get_next_line.h
 ```
 ---
 
-If you are looking for and explanation of the code it´s avaiable in *get_next_line.c* file. 
+If you are looking for and explanation of the code it´s avaiable in *get_next_line.c* file.
 Also *main* directory contains a main.c file that you can use to execute the programn and a text file that will be read.
 
 
